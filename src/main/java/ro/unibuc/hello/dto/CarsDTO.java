@@ -36,19 +36,19 @@ public class CarsDTO {
     public void setCarId(String carId) {this.carId= carId;}
 
     public String getCarMaker() { return carMaker;}
-    public void setCarMaker() { this.carMaker= carMaker;}
+    public void setCarMaker(String carMaker) { this.carMaker= carMaker;}
 
     public String getCarType() { return carType;}
-    public void setCarType() { this.carType= carType;}
+    public void setCarType(String carType) { this.carType= carType;}
 
     public Integer getCarYear() { return carYear;}
-    public void setCarYear() { this.carYear= carYear;}
+    public void setCarYear(Integer carYear) { this.carYear= carYear;}
 
     public String getCarEuro() { return carEuro;}
-    public void setCarEuro() { this.carEuro= carEuro;}
+    public void setCarEuro(String carEuro) { this.carEuro= carEuro;}
 
     public Integer getCarPrice() { return carPrice;}
-    public void setCarPrice() { this.carPrice= carPrice;}
+    public void setCarPrice(Integer carPrice) { this.carPrice= carPrice;}
 
     @Override
     public boolean equals(Object o) {
@@ -58,10 +58,10 @@ public class CarsDTO {
         return carId.equals(carDTO.carId); //&& carMaker.equals(carDTO.carMaker) && carType.equals(carDTO.carType) && carYear.equals(carDTO.carYear) && carEuro.equals(carDTO.carEuro) && carPrice.equals(carDTO.carPrice);
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(carId, carMaker, carType, carYear, carEuro, carPrice);
-    }
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(carId, carMaker, carType, carYear, carEuro, carPrice);
+//    }
 
     @Override
     public String toString() {
