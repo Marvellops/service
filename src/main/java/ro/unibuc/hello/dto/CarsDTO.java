@@ -58,10 +58,7 @@ public class CarsDTO {
         return carId.equals(carDTO.carId); //&& carMaker.equals(carDTO.carMaker) && carType.equals(carDTO.carType) && carYear.equals(carDTO.carYear) && carEuro.equals(carDTO.carEuro) && carPrice.equals(carDTO.carPrice);
     }
 
-//    @Override
-//    public int hashCode() {
-//        return Objects.hash(carId, carMaker, carType, carYear, carEuro, carPrice);
-//    }
+
 
     @Override
     public String toString() {

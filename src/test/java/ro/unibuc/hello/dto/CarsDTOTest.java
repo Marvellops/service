@@ -87,9 +87,6 @@ class CarsDTOTest {
     void testEquals() { Assertions.assertEquals(carsDTO, carsDTO2);
     }
 
-//    @Test
-//    void testHashCode() { Assertions.assertEquals(hash, carsDTO.hashCode());
-//    }
 
     @Test
     void testToString() { Assertions.assertEquals(carsStringDTO, carsDTO.toString());
