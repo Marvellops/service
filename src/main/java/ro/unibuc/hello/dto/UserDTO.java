@@ -18,6 +18,10 @@ public class UserDTO {
 
     }
 
+    public String getId() {
+        return id;
+    }
+
     public String getFirstName() {
         return firstName;
     }
