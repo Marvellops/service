@@ -22,25 +22,14 @@ public class UserDTO {
         return id;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
     public String getUserName() {
         return userName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
 
     @Override
     public String toString() {
-        return "UserDTO{" +
+            return "UserDTO{" +
                 "userName='" + userName + '\'' +
                 ", firstName='" + firstName + '\'' +
                 '}';

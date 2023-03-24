@@ -15,4 +15,12 @@ public class UserDTOTest {
     public void test_userName(){
         Assertions.assertSame("mary", userDTO.getUserName());
     }
+
+    public static String userDTOToString="UserDTO{" +
+            "userName='" + "mary" + '\'' +
+            ", firstName='" + "Jhonson" + '\'' +
+            '}';
+    @Test
+    public void testToString() { Assertions.assertEquals(userDTOToString, userDTO.toString());
+    }
 }
