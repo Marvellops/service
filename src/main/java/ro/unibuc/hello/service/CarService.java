@@ -15,8 +15,12 @@ import java.util.*;
 @Component
 public class CarService {
 
+    private final CarRepository carRepository;
+
     @Autowired
-    private CarRepository carRepository;
+    public CarService(CarRepository carRepository) {
+        this.carRepository= carRepository;
+    }
 
     public List<CarsDTO> getCars() {
         ArrayList<CarsDTO> carsDTOs = new ArrayList<>();
