@@ -32,7 +32,7 @@ public class UserController {
 
     @PostMapping("/user/register")
     @ResponseBody
-    public RegisterUserDTO registerUser(@RequestParam(name="firstName") String firstName,
+    public String registerUser(@RequestParam(name="firstName") String firstName,
                                         @RequestParam(name="lastName") String lastName,
                                         @RequestParam(name="userName") String userName,
                                         @RequestParam(name="password") String password) {

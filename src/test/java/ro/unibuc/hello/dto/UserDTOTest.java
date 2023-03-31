@@ -16,7 +16,7 @@ public class UserDTOTest {
         Assertions.assertSame("mary", userDTO.getUserName());
     }
 
-    public static String userDTOToString="UserDTO{" +
+    public static String userDTOToString = "UserDTO{" +
             "userName='" + "mary" + '\'' +
             ", firstName='" + "Jhonson" + '\'' +
             '}';

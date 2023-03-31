@@ -38,10 +38,16 @@ public class UserService {
 
     }
 
-    public RegisterUserDTO registerUser(String firstName, String lastName,String userName, String password){
+    public String registerUser(String firstName, String lastName,String userName, String password){
         UserEntity user = new UserEntity( firstName, lastName, userName, password);
 
-        return new RegisterUserDTO(userRepository.save(user) );
+        if(firstName == null || lastName == null || userName == null || password == null)
+        {
+            return "Empty data";
+        }
+        userRepository.save(user);
+
+        return "Saved successfully";
     }
 
     public void changeUsername(String id, String newUserName)
