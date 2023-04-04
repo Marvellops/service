@@ -37,8 +37,6 @@ public class CarServiceTest {
     ArrayList<CarEntity>carEntities;
     String deleteResponse;
 
-    List<String> reviewIds;
-    List<String> watchItemIds;
 
     @BeforeEach
     void setUp(){
