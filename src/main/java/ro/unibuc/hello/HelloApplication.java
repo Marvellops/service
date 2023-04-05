@@ -38,18 +38,18 @@ public class HelloApplication {
 				"This is an example of using a data storage engine running separately from our applications server"));
 
 		carRepository.deleteAll();
-		carRepository.save(new CarEntity( "BMW", "Sedan", 2022, "Euro6",30000));
-		carRepository.save(new CarEntity( "Volvo", "SUV", 2022, "Euro6",50000));
-		carRepository.save(new CarEntity( "Renault", "Sedan", 2022, "Euro6",18000));
-		carRepository.save(new CarEntity( "Mercedes", "Sedan", 2022, "Euro6",90000));
-		carRepository.save(new CarEntity( "Dacia", "SUV", 2022, "Euro6",15000));
-		carRepository.save(new CarEntity( "Dacia", "Sedan", 2022, "Euro6",10000));
+		carRepository.save(new CarEntity( "642488b9818d7e17c7fb9b90","BMW", "Sedan", 2022, "Euro6",30000));
+		carRepository.save(new CarEntity( "642488b9818d7e17c7fb9b91","Volvo", "SUV", 2022, "Euro6",50000));
+		carRepository.save(new CarEntity( "642488b9818d7e17c7fb9b92","Renault", "Sedan", 2022, "Euro6",18000));
+		carRepository.save(new CarEntity( "642488b9818d7e17c7fb9b93","Mercedes", "Sedan", 2022, "Euro6",90000));
+		carRepository.save(new CarEntity( "642488b9818d7e17c7fb9b94","Dacia", "SUV", 2022, "Euro6",15000));
+		carRepository.save(new CarEntity( "642488b9818d7e17c7fb9b95","Dacia", "Sedan", 2022, "Euro6",10000));
 
 		userRepository.deleteAll();
-		userRepository.save(new UserEntity("Mary", "Johnson", "mary", "admin"));
-		userRepository.save(new UserEntity("Anne", "Johnson", "anny", "admin"));
-		userRepository.save(new UserEntity("Jon", "Mark","jonny", "admin"));
-		userRepository.save(new UserEntity("Danny", "Moore", "dan","admin"));
+		userRepository.save(new UserEntity("642488b9818d7e17c7fb9b98","Mary", "Johnson", "mary", "admin"));
+		userRepository.save(new UserEntity("642488b9818d7e17c7fb9b99","Anne", "Johnson", "anny", "admin"));
+		userRepository.save(new UserEntity("642488b9818d7e17c7fb9c00","Jon", "Mark","jonny", "admin"));
+		userRepository.save(new UserEntity("642488b9818d7e17c7fb9c01","Danny", "Moore", "dan","admin"));
 
 		carXUserRepository.deleteAll();
 	}

@@ -5,22 +5,21 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import ro.unibuc.hello.data.CarXUserRepository;
 import ro.unibuc.hello.dto.BuyCarDTO;
 
-@ExtendWith(SpringExtension.class)
+@SpringBootTest
 public class CarXUserServiceTest {
-    @Mock
-    CarXUserRepository carXUserRepository;
-
-    @InjectMocks
-    CarXUserService carXUserService = new CarXUserService();
+    @Autowired
+    private CarXUserService carXUserService;
 
     @Test
     public void test_buyCar_with_data() {
         // Arrange
-        BuyCarDTO buyCarDTO= new BuyCarDTO("642488b9818d7e17c7fb9b98", "642488b9818d7e17c7fb9b93");
+        BuyCarDTO buyCarDTO= new BuyCarDTO("642488b9818d7e17c7fb9b98", "642488b9818d7e17c7fb9b90");
 
         // Act
         String response = carXUserService.buyCar(buyCarDTO);

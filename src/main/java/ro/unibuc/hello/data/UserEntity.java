@@ -15,12 +15,27 @@ public class UserEntity {
     public String userName;
     public String password;
 
-    public UserEntity(String firstName, String lastName,String userName, String password)
+    public UserEntity() {
+    }
+
+    public UserEntity(String firstName, String lastName, String userName, String password)
     {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
         this.password = password;
+    }
+
+    public UserEntity(String id, String firstName, String lastName, String userName, String password) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.password = password;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public String getName(){
