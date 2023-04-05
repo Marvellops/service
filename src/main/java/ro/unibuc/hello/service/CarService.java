@@ -15,8 +15,7 @@ import java.util.*;
 @Component
 public class CarService {
 
-    private final CarRepository carRepository;
-
+    private CarRepository carRepository;
     @Autowired
     public CarService(CarRepository carRepository) {
         this.carRepository= carRepository;
