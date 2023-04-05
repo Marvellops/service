@@ -33,6 +33,15 @@ public class CarEntity {
         this.carPrice= carPrice;
     }
 
+    public CarEntity(String carId, String carMaker, String carType, Integer carYear, String carEuro, Integer carPrice) {
+        this.carId = carId;
+        this.carMaker = carMaker;
+        this.carType = carType;
+        this.carYear = carYear;
+        this.carEuro = carEuro;
+        this.carPrice = carPrice;
+    }
+
     public String getCarId() {return carId;}
     public void setCarId(String carId) {this.carId= carId;}
 
