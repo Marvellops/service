@@ -61,6 +61,17 @@ public class UserService {
         userRepository.save(user);
     }
 
+    public UserDTO changeUsername_2(String id, String newUserName)
+    {
+        UserEntity user = userRepository.findById(id).orElse(null);
+
+        if (user == null)
+            throw new EntityNotFoundException(id);
+
+        user.setUserName(newUserName);
+        return new UserDTO(userRepository.save(user));
+    }
+
     public void deleteUserById(String id){
         userRepository.deleteById(id);
     }
