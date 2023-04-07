@@ -1,5 +1,6 @@
 package ro.unibuc.hello.dto;
 
+import ro.unibuc.hello.data.CarEntity;
 import ro.unibuc.hello.data.UserEntity;
 
 public class UserDTO {
@@ -16,6 +17,13 @@ public class UserDTO {
         this.userName = userName;
         this.firstName = firstName;
 
+    }
+
+    public UserDTO(UserEntity user){
+
+        this.id = user.getId();
+        this.firstName = user.getFirstName();
+        this.userName = user.getUserName();
     }
 
     public String getId() {
