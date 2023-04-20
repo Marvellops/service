@@ -8,7 +8,7 @@ pipeline {
         stage('Build & Test') {
             steps {
                 sh './gradlew clean build'
-            }
+            
             stage('Tag image') {
 	      steps {
 		script {
@@ -20,6 +20,8 @@ pipeline {
 		sh "docker build -t sebastica/hello-img:${MAJOR_VERSION}.\$((${MINOR_VERSION} + 1)).${PATCH_VERSION} ."
 	      }
 }
+}
+
         }
     }
 }
