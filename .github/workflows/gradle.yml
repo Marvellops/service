@@ -28,6 +28,10 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.2
+      with:
+        path: ./build/libs/hello-0.0.1-SNAPSHOT.jar
     - run: docker-compose up -d
     - run: make build
     - name: Build with Gradle
