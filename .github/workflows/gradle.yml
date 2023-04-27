@@ -52,6 +52,5 @@ jobs:
     - name: Pull Docker image
       run: docker pull sebastica/hello-img:latest
     - name: Run Docker image
-      run: docker run sebastica/hello-img:latest
     - run: docker images
     - run: docker ps
