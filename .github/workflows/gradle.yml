@@ -46,7 +46,7 @@ jobs:
           tags: |
             sebastica/hello-img:latest
             sebastica/hello-img:v1.2
-    - name: Pull Docker image
-      run: docker pull sebastica/hello-img:latest
+    - name: Run Docker image
+      run: docker run -p 8080:8080 sebastica/hello-img:latest
     - run: docker images
     - run: docker ps
