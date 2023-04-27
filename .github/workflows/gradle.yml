@@ -50,8 +50,7 @@ jobs:
     - run: docker ps
     - name: Pull Docker image
       run: docker pull sebastica/hello-img:latest
-    - run: kill -9 27017
     - name: Run Docker image
-      run: docker sebastica/hello-img:latest
+      run: docker run sebastica/hello-img:latest
     - run: docker images
     - run: docker ps
