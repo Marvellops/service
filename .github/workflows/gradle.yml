@@ -46,3 +46,5 @@ jobs:
           tags: |
             sebastica/hello-img:latest
             sebastica/hello-img:v1.2
+    - name: Test with Gradle
+    - run: ./gradlew testE2E
