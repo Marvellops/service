@@ -46,4 +46,4 @@ jobs:
           tags: |
             sebastica/hello-img:latest
             sebastica/hello-img:v1.2
-    - run: docker-compose up -d hello-img
+    - run: docker ps
