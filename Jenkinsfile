@@ -13,7 +13,7 @@ pipeline {
             }
 	stage('Tag image')     {
 	     steps {
-		script {
+		script { 
 		   sh([script: 'git fetch --tag', returnStdout: true]).trim()
 		   env.MAJOR_VERSION = sh([script: 'git tag | sort --version-sort | tail -1 | cut -d . -f 1', returnStdout: true]).trim()
 		   env.MINOR_VERSION = sh([script: 'git tag | sort --version-sort | tail -1 | cut -d . -f 2', returnStdout: true]).trim()
