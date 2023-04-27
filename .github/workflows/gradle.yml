@@ -47,12 +47,11 @@ jobs:
             sebastica/hello-img:latest
             sebastica/hello-img:v1.2
     - name: Stop all docker images running
-      run: docker kill $(docker ps -q)
     - run: docker ps
     - name: Pull Docker image
       run: docker pull sebastica/hello-img:latest
     - run: kill -9 27017
     - name: Run Docker image
-      run: docker run -p 8080:8081 sebastica/hello-img:latest
+      run: docker sebastica/hello-img:latest
     - run: docker images
     - run: docker ps
