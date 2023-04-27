@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
         DOCKER_PASSWORD = credentials("parolaDocker")
+        GITHUB_TOKEN = credentials("2f91c034-8fc8-4ef5-85a1-a3e1d5f6936c")        
     }
 
     stages {
