@@ -46,10 +46,8 @@ jobs:
           tags: |
             sebastica/hello-img:latest
             sebastica/hello-img:v1.2
-    - name: Stop Mongo image
-      run: docker stop mongo
-    - name: Remove Mongo image
-      run: docker remove mongo
+    - name: Stop all docker images running
+      run: docker kill $(docker ps -q)
     - run: docker ps
     - name: Pull Docker image
       run: docker pull sebastica/hello-img:latest
