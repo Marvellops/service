@@ -44,5 +44,5 @@ jobs:
           context: .
           push: true
           tags: |
-            sebastica/hello-img:latest
-            sebastica/hello-img:v1.0
+            sebastica/test:latest
+            sebastica/test:v1.0
