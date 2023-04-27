@@ -22,7 +22,7 @@ pipeline {
 		}
 		sh "docker build -t sebastica/hello-img:${MAJOR_VERSION}.\$((${MINOR_VERSION} + 1)).${PATCH_VERSION} ."		
 		sh "git tag ${env.IMAGE_TAG}"		
-		sh "git push https://$GITHUB_TOKEN@github.com/seio86/service.git ${env.IMAGE_TAG}"
+		sh "git push https://$GITHUB_TOKEN@github.com/Marvellops/service.git ${env.IMAGE_TAG}"
 	      }
 	   }
 	stage('Docker start') {
