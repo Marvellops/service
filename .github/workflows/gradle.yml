@@ -47,8 +47,5 @@ jobs:
             sebastica/hello-img:latest
             sebastica/hello-img:v1.2
     - name: Pull Docker image
-      uses: docker/pull-action@v2
-      with:
-          repository: sebastica/hello-img
-          tag: latest
+      run: docker pull sebastica/hello-img:latest
     - run: docker ps
