@@ -52,6 +52,6 @@ jobs:
     - name: Pull Docker image
       run: docker pull sebastica/hello-img:latest
     - name: Run Docker image
-      run: docker run -p 8080:8080 sebastica/hello-img:latest
+      run: docker run -p 8080:8081 sebastica/hello-img:latest
     - run: docker images
     - run: docker ps
