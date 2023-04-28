@@ -27,7 +27,7 @@ pipeline {
 	   }
 	stage('Docker start') {
             steps {
-                sh "IMAGE_TAG=${env.IMAGE_TAG} docker-compose up -d hello-img"
+                sh "IMAGE_TAG=${env.IMAGE_TAG} docker-compose up -d hello"
             }
         }
         stage('Test E2E') {
