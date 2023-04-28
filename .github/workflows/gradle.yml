@@ -49,3 +49,4 @@ jobs:
     - run: docker ps
     - run: docker images
     - run:  docker-compose up -d  hello-img
+    - run: ./gradlew testE2E
