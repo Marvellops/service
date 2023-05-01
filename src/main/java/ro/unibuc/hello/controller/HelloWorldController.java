@@ -37,18 +37,18 @@ public class HelloWorldController {
     @Timed(value = "hello.greeting.time", description = "Time taken to return greeting")
     @Counted(value = "hello.greeting.count", description = "Times greeting was returned")
     public Greeting sayHello(@RequestParam(name="name", required=false, defaultValue="Stranger") String name) {
-        metricsRegistry.counter("my_non_aop_metric", "endpoint", "hello").increment(counter.incrementAndGet());
-       // return helloWorldService.hello(name);
-        return new Greeting(counter.incrementAndGet(), String.format(helloTemplate, name));
+        return helloWorldService.hello(name);
+        //metricsRegistry.counter("my_non_aop_metric", "endpoint", "hello").increment(counter.incrementAndGet());
+        //return new Greeting(counter.incrementAndGet(), String.format(helloTemplate, name));
     }
 
     @GetMapping("/info")
     @ResponseBody
     @Timed(value = "hello.info.time", description = "Time taken to return info")
     @Counted(value = "hello.info.count", description = "Times info was returned")
-//    public Greeting info(@RequestParam(name="title", required=false, defaultValue="Overview") String title) throws EntityNotFoundException {
-//        return helloWorldService.buildGreetingFromInfo(title);
-//    }
+    public Greeting info(@RequestParam(name="title", required=false, defaultValue="Overview") String title) throws EntityNotFoundException {
+        return helloWorldService.buildGreetingFromInfo(title);
+    }
     public Greeting listAll(@RequestParam(name="title", required=false, defaultValue="Overview") String title) {
         InformationEntity entity = informationRepository.findByTitle(title);
         return new Greeting(counter.incrementAndGet(), String.format(informationTemplate, entity.title, entity.description));
