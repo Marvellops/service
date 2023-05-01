@@ -34,6 +34,7 @@ pipeline {
             steps {
                 sh './gradlew testE2E'
             }
+        }
         stage('Test IT') {
             steps {
                 sh './gradlew testIT'
