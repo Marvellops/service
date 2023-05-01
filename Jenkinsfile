@@ -30,14 +30,14 @@ pipeline {
                     sh "IMAGE_TAG=${env.IMAGE_TAG} docker compose up -d hello"
                 }
             }
-        stage('Test E2E') {
-            steps {
-                sh './gradlew testE2E'
-            }
-        }
         stage('Test IT') {
             steps {
                 sh './gradlew testIT'
+            }
+        }
+        stage('Test E2E') {
+            steps {
+                sh './gradlew testE2E'
             }
         }
     }
