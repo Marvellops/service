@@ -1,5 +1,7 @@
 package ro.unibuc.hello.controller;
 
+import io.micrometer.core.annotation.Counted;
+import io.micrometer.core.annotation.Timed;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -18,6 +20,8 @@ public class CarController {
 
     @GetMapping("/car/getAll")
     @ResponseBody
+    @Timed(value = "hello.car.getAll.time", description = "Time taken to return all cars")
+    @Counted(value = "hello.car.getAll.count", description = "Times all cars were returned")
     public List<CarsDTO> getCars(){
         return carService.getCars();
     }
