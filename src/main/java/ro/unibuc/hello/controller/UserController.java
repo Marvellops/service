@@ -18,6 +18,8 @@ public class UserController {
 
     @GetMapping("/user/getAll")
     @ResponseBody
+    @Timed(value = "hello.user.getAll.time", description = "Time taken to return all users")
+    @Counted(value = "hello.user.getAll.count", description = "Times all users were returned")
     public List<UserEntity> getUsers(){
         List<UserEntity> users = userService.getUsers();
         return users;
