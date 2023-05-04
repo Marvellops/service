@@ -1,5 +1,8 @@
 package ro.unibuc.hello.controller;
 
+import io.micrometer.core.annotation.Counted;
+import io.micrometer.core.annotation.Timed;
+import io.micrometer.core.instrument.MeterRegistry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 ;
@@ -15,9 +18,13 @@ import java.util.List;
 public class UserController {
     @Autowired
     private UserService userService;
+    @Autowired
+    MeterRegistry metricsRegistry;
 
     @GetMapping("/user/getAll")
     @ResponseBody
+    @Timed(value = "hello.user.getAll.time", description = "Time taken to return all users")
+    @Counted(value = "hello.user.getAll.count", description = "Times all users were returned")
     public List<UserEntity> getUsers(){
         List<UserEntity> users = userService.getUsers();
         return users;
