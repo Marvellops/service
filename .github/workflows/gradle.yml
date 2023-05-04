@@ -28,6 +28,7 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+    - run: docker plugin install grafana/loki-docker-driver:2.4.1 --alias loki --grant-all-permissions
     - run: docker-compose up -d mongo
     - name: Build with Gradle
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
