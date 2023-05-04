@@ -49,4 +49,4 @@ jobs:
             sebastica/hello-img:v1.2
     - run: docker ps
     - run: docker images
-    - run:  docker-compose up -d  hello-img
+    - run:  docker-compose up -d  hello
