@@ -74,6 +74,8 @@ public class CarController {
 
     @GetMapping("/car/orderAscendingByCarPrice")
     @ResponseBody
+    @Timed(value = "car.order.time", description = "Time taken to order all cars")
+    @Counted(value = "car.order.count", description = "Times all cars were returned")
     public List<CarsDTO> orderCarsAscendingByCarPrice(){
         return carService.OrderCarsByPriceAscending();
     }
